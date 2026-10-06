@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChatGPT Ads Singapore — BlueFocus</title>
+<meta name="description" content="ChatGPT Ads are live in Singapore. BlueFocus helps you get seen in ChatGPT answers — diagnosis, campaign design and managed operations.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234285F4'/%3E%3Cpath d='M8 10v9a3 3 0 0 0 3 3h6l4 4v-4h3a3 3 0 0 0 3-3v-9a3 3 0 0 0-3-3H11a3 3 0 0 0-3 3z' fill='%23FFFFFF'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+  :root{
+    --navy:#31538F; --brand:#4285F4; --cyan:#00A3FF; --sky:#5B9BD5;
+    --pale:#EFF6FF; --pale2:#DBEAFF; --page:#F2F8FA; --white:#FFFFFF;
+    --ink:#24364F; --muted:#5A6B8C; --line:#DBEAFF;
+    --orange:#FFAB40; --orange2:#FFC000; --red:#F53C00; --green:#00D321;
+    --display:'Montserrat',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+    --body:'Montserrat',ui-sans-serif,system-ui,-apple-system,'Segoe UI','Noto Sans SC',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--body);color:var(--ink);background:var(--page);line-height:1.55;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,.display{font-family:var(--display);letter-spacing:-.01em;}
+  .wrap{width:min(1120px,100% - 48px);margin-inline:auto;}
+  a{color:inherit;text-decoration:none;}
+  /* ---------- BlueFocusAI multicolor wordmark ---------- */
+  .bf-mark{font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.02em;line-height:1;}
+  .bf-mark .b1{color:var(--brand);} .bf-mark .b2{color:var(--orange2);} .bf-mark .b3{color:var(--red);} .bf-mark .b4{color:var(--green);}
+  .bf-mark .b5{color:var(--brand);} .bf-mark .b6{color:var(--sky);}
+  .bf-sub{font-family:var(--body);font-weight:600;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:2px;}
+  /* ---------- palette indicator (brand device) ---------- */
+  .palette{display:inline-flex;gap:5px;align-items:center;}
+  .palette i{width:9px;height:9px;border-radius:2px;display:block;}
+  .palette i.o{background:var(--orange);} .palette i.b{background:var(--brand);} .palette i.g{background:var(--green);} .palette i.n{background:var(--navy);}
+  .palette i.s{width:4px;height:9px;background:var(--cyan);}
+  /* ---------- nav ---------- */
+  nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px;}
+  .brand{display:flex;flex-direction:column;gap:2px;}
+  .nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;font-weight:700;font-size:14px;border-radius:10px;padding:11px 18px;box-shadow:0 2px 6px rgba(66,133,244,.28);}
+  .nav-cta:hover{background:var(--navy);}
+  /* ---------- hero ---------- */
+  header{background:linear-gradient(180deg,var(--page) 0%,var(--white) 78%);position:relative;overflow:hidden;}
+  .hero-blob{position:absolute;inset:0;pointer-events:none;}
+  .hero-blob::before,.hero-blob::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;}
+  .hero-blob::before{width:520px;height:520px;right:-140px;top:-160px;background:radial-gradient(circle,#00A3FF 0%,transparent 62%);}
+  .hero-blob::after{width:420px;height:420px;left:-150px;bottom:-180px;background:radial-gradient(circle,#FFAB40 0%,transparent 60%);opacity:.35;}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:84px 0 64px;position:relative;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);background:var(--pale);border:1px solid var(--line);border-radius:999px;padding:6px 14px;margin-bottom:20px;}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--green);}
+  h1{font-size:clamp(32px,4.6vw,52px);line-height:1.1;font-weight:800;color:var(--navy);margin-bottom:20px;}
+  h1 .accent{color:var(--brand);}
+  .sub{font-size:17px;color:var(--muted);max-width:52ch;margin-bottom:28px;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:12px;padding:14px 22px;font-weight:700;font-size:15px;transition:transform .12s ease,box-shadow .12s ease;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--brand);color:#fff;box-shadow:0 10px 26px rgba(66,133,244,.35);}
+  .btn-primary:hover{background:var(--navy);}
+  .btn-ghost{border:1.5px solid var(--pale2);color:var(--navy);background:#fff;}
+  .btn-ghost:hover{border-color:var(--brand);color:var(--brand);}
+  .hero-trust{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 18px;}
+  .hero-trust span{display:inline-flex;align-items:center;gap:6px;}
+  .hero-trust svg{flex:none;color:var(--brand);}
+  /* chat mockup */
+  .mock{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 64px rgba(49,83,143,.16);color:var(--ink);overflow:hidden;font-size:14px;}
+  .mock-head{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);}
+  .mock-head .m-logo{width:26px;height:26px;border-radius:50%;background:var(--green);display:grid;place-items:center;color:#fff;font-weight:800;font-family:var(--display);font-size:13px;}
+  .mock-head .m-title{font-weight:700;font-size:14px;color:var(--navy);}
+  .mock-head .m-plan{margin-left:auto;font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--page);}
+  .mock-body{padding:16px 16px 8px;}
+  .m-q{font-size:14.5px;color:var(--ink);margin-bottom:12px;}
+  .m-a{background:var(--page);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--ink);font-size:13.5px;}
+  .m-a li{margin:6px 0 0 18px;}
+  .m-ad{margin-top:12px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;grid-template-columns:1fr 72px;gap:12px;background:#fff;}
+  .m-ad .ad-top{display:flex;align-items:center;gap:8px;font-size:12.5px;}
+  .ad-logo{width:22px;height:22px;border-radius:6px;background:var(--pale2);display:grid;place-items:center;font-weight:800;color:var(--navy);font-size:11px;}
+  .ad-tag{margin-left:auto;font-size:10.5px;color:var(--muted);background:var(--page);border:1px solid var(--line);border-radius:999px;padding:2px 8px;}
+  .m-ad h4{font-family:var(--display);font-weight:700;font-size:14px;margin-top:6px;color:var(--navy);}
+  .m-ad p{font-size:12.5px;color:var(--muted);}
+  .ad-img{position:relative;border-radius:10px;overflow:hidden;}
+  .ad-img img{width:100%;height:100%;object-fit:cover;display:block;}
+  .ad-img .tag{position:absolute;left:4px;bottom:4px;background:rgba(21,34,64,.72);color:#fff;font-size:9px;font-weight:700;border-radius:4px;padding:2px 6px;letter-spacing:.04em;}
+  .mock-input{margin:14px 16px 16px;display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:9px 14px;color:#98A2B3;font-size:13px;}
+  .mock-input .send{margin-left:auto;width:24px;height:24px;border-radius:50%;background:var(--brand);display:grid;place-items:center;}
+  .mock-cap{font-size:12px;color:var(--muted);text-align:center;padding:0 16px 18px;display:flex;align-items:center;justify-content:center;gap:6px;}
+  .mock-cap svg{flex:none;color:var(--sky);}
+  /* ---------- stats ---------- */
+  .stats-in{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:6px;padding-bottom:40px;}
+  .stat{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:0 4px 14px rgba(49,83,143,.06);}
+  .stat .n{font-family:var(--display);font-size:24px;font-weight:800;color:var(--brand);}
+  .stat .n em{color:var(--cyan);font-style:normal;}
+  .stat .l{font-size:12.5px;color:var(--muted);margin-top:5px;line-height:1.45;}
+  /* ---------- sections ---------- */
+  section{padding:84px 0;}
+  .sec-head{max-width:660px;margin-bottom:42px;}
+  .sec-head .k{font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin-bottom:10px;}
+  .sec-head h2{font-size:clamp(26px,3.4vw,38px);line-height:1.15;font-weight:800;color:var(--navy);margin-bottom:12px;}
+  .sec-head p{color:var(--muted);font-size:16px;}
+  /* what are they */
+  .what-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start;}
+  .facts{display:flex;flex-direction:column;gap:12px;margin-top:24px;}
+  .fact{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:#fff;}
+  .fact .ic{flex:none;width:38px;height:38px;border-radius:10px;background:var(--pale);color:var(--brand);display:grid;place-items:center;}
+  .fact b{display:block;font-size:15px;margin-bottom:2px;color:var(--navy);}
+  .fact p{font-size:13.5px;color:var(--muted);}
+  .anatomy{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:26px;}
+  .anatomy h3{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:14px;}
+  .anatomy .ad-card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff;display:grid;grid-template-columns:1fr 104px;gap:12px;}
+  .anatomy .ad-img2{border-radius:10px;overflow:hidden;position:relative;}
+  .anatomy .ad-img2 img{width:100%;height:100%;object-fit:cover;display:block;}
+  .anatomy .caps{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  .cap{font-size:12px;color:var(--navy);background:var(--pale);border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-weight:600;}
+  .anatomy .note{font-size:12.5px;color:var(--muted);margin-top:14px;}
+  /* see it in action */
+  #how{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .demo{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center;}
+  .demo-copy .k{font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin-bottom:10px;}
+  .demo-copy h2{font-size:clamp(26px,3.4vw,38px);line-height:1.15;color:var(--navy);margin-bottom:12px;}
+  .demo-copy p{color:var(--muted);font-size:16px;margin-bottom:18px;}
+  .demo-copy ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .demo-copy li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink);}
+  .demo-copy li svg{flex:none;color:var(--brand);margin-top:3px;}
+  /* why now */
+  .tl{position:relative;margin:8px 0 44px;}
+  .tl-row{display:grid;grid-template-columns:128px 28px 1fr;column-gap:14px;position:relative;padding-bottom:26px;}
+  .tl-row:last-child{padding-bottom:0;}
+  .tl-row .axis{justify-self:center;position:relative;width:2px;background:var(--pale2);height:100%;}
+  .tl-row:last-child .axis{height:50%;}
+  .tl-row .dot{position:absolute;top:4px;left:50%;transform:translateX(-50%);width:14px;height:14px;border-radius:50%;background:var(--brand);border:3px solid #fff;box-shadow:0 0 0 2px var(--brand);}
+  .tl-date{font-family:var(--display);font-weight:800;font-size:14px;color:var(--navy);padding-top:1px;}
+  .tl-date small{display:block;font-family:var(--body);font-weight:700;font-size:11.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;}
+  .tl-copy b{display:block;font-size:15px;margin-bottom:2px;color:var(--navy);}
+  .tl-copy p{font-size:13.5px;color:var(--muted);}
+  .chart-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;margin-bottom:28px;}
+  .chart-card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 4px 14px rgba(49,83,143,.06);}
+  .chart-card h3{font-size:17px;font-weight:800;color:var(--navy);margin-bottom:4px;}
+  .chart-card .sub{font-size:12.5px;color:var(--muted);margin-bottom:8px;}
+  .chart-card .chart{width:100%;height:330px;}
+  .insights{display:flex;flex-direction:column;gap:12px;}
+  .insight{border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:12px;padding:14px 16px;background:#fff;}
+  .insight b{font-size:14.5px;display:block;margin-bottom:3px;color:var(--navy);}
+  .insight p{font-size:13.5px;color:var(--muted);}
+  .chart-note{font-size:12.5px;color:var(--muted);max-width:760px;}
+  .chart-note b{color:var(--navy);}
+  /* approach */
+  #approach{background:linear-gradient(180deg,var(--page) 0%,var(--white) 100%);}
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:44px;}
+  .step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;}
+  .step .num{font-family:var(--display);font-weight:800;font-size:13px;color:var(--brand);letter-spacing:.08em;margin-bottom:8px;}
+  .step b{font-size:14.5px;display:block;margin-bottom:4px;color:var(--navy);}
+  .step p{font-size:13px;color:var(--muted);}
+  .approach-mid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-bottom:28px;align-items:stretch;}
+  .services{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  .service{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff;}
+  .service .ic{width:38px;height:38px;border-radius:10px;background:var(--pale);color:var(--brand);display:grid;place-items:center;margin-bottom:12px;}
+  .service b{font-size:15px;display:block;margin-bottom:5px;color:var(--navy);}
+  .service p{font-size:13px;color:var(--muted);}
+  .sky-card{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:260px;}
+  .sky-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+  .sky-card .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(49,83,143,.18) 0%,rgba(49,83,143,.78) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px 20px;color:#fff;}
+  .sky-card .ov b{font-family:var(--display);font-size:17px;font-weight:800;line-height:1.25;}
+  .sky-card .ov small{font-size:12px;opacity:.92;margin-top:4px;letter-spacing:.05em;}
+  .vert-line{font-size:13.5px;color:var(--muted);}
+  .vert-line b{color:var(--navy);}
+  .vert-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+  .vchip{font-size:13px;font-weight:700;color:var(--navy);background:var(--pale);border:1px solid var(--line);border-radius:999px;padding:6px 14px;}
+  /* pricing & faq */
+  .pf{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start;}
+  .price-cards{display:flex;flex-direction:column;gap:12px;}
+  .price{border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:16px;background:#fff;}
+  .price .pm{font-family:var(--display);font-weight:800;font-size:17px;color:var(--brand);min-width:110px;}
+  .price .pd{font-size:13.5px;color:var(--muted);}
+  .price .pd b{color:var(--ink);}
+  .price-note{font-size:12.5px;color:var(--muted);margin-top:8px;}
+  details{border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:10px;overflow:hidden;}
+  summary{list-style:none;cursor:pointer;padding:16px 18px;font-weight:700;font-size:15px;color:var(--navy);display:flex;align-items:center;gap:10px;}
+  summary::-webkit-details-marker{display:none;}
+  summary .tgl{margin-left:auto;color:var(--brand);transition:transform .15s ease;}
+  details[open] .tgl{transform:rotate(45deg);}
+  .faq-a{padding:0 18px 16px;font-size:14px;color:var(--muted);}
+  /* cta */
+  #cta{background:linear-gradient(120deg,var(--navy) 0%,var(--brand) 100%);color:#fff;}
+  .cta-in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+  .cta-copy h2{font-size:clamp(28px,3.6vw,42px);line-height:1.12;font-weight:800;margin-bottom:14px;}
+  .cta-copy p{color:#D6E4FF;font-size:16px;margin-bottom:20px;}
+  .promise{display:flex;flex-direction:column;gap:10px;font-size:14.5px;color:#D6E4FF;}
+  .promise li{display:flex;gap:10px;align-items:flex-start;}
+  .promise svg{flex:none;color:#9FC4FF;margin-top:3px;}
+  form{background:#fff;border-radius:18px;padding:26px;color:var(--ink);box-shadow:0 24px 60px rgba(21,34,64,.28);}
+  form h3{font-size:19px;font-weight:800;color:var(--navy);margin-bottom:6px;}
+  form .fsub{font-size:13.5px;color:var(--muted);margin-bottom:18px;}
+  .field{margin-bottom:14px;}
+  label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--navy);}
+  input,select,textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 13px;font-size:14px;font-family:var(--body);color:var(--ink);background:#fff;}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--pale2);border-color:var(--brand);}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  form .btn{width:100%;justify-content:center;border:none;cursor:pointer;margin-top:8px;}
+  .f-note{font-size:11.5px;color:var(--muted);margin-top:12px;text-align:center;}
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:44px 0 56px;background:var(--white);}
+  .foot{display:grid;grid-template-columns:1.4fr .6fr;gap:28px;align-items:start;}
+  .foot .brand{margin-bottom:12px;}
+  .foot p{font-size:12.5px;color:var(--muted);line-height:1.6;max-width:600px;}
+  .foot .legal{font-size:12px;font-weight:700;color:var(--navy);margin-top:2px;}
+  .foot .ai-line{font-size:12.5px;color:var(--muted);margin:10px 0 14px;max-width:520px;font-style:italic;}
+  .flinks{display:flex;flex-direction:column;gap:10px;font-size:13.5px;font-weight:600;}
+  .flinks a:hover{color:var(--brand);}
+  .foot .palette{margin-top:14px;}
+  /* toast */
+  #toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(80px);background:var(--navy);color:#fff;padding:14px 20px;border-radius:12px;font-size:14px;box-shadow:0 16px 40px rgba(21,34,64,.35);opacity:0;transition:all .3s ease;z-index:100;max-width:90vw;}
+  #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .hero,.what-grid,.demo,.chart-wrap,.pf,.cta-in{grid-template-columns:1fr;}
+    .hero{padding:56px 0 44px;gap:36px;}
+    .steps{grid-template-columns:repeat(2,1fr);}
+    .steps .step:nth-child(5){grid-column:1 / -1;}
+    .approach-mid{grid-template-columns:1fr;}
+    .services{grid-template-columns:repeat(2,1fr);}
+    .stats-in{grid-template-columns:repeat(2,1fr);}
+    section{padding:60px 0;}
+    .chart-card .chart{height:300px;}
+  }
+  @media (max-width:560px){
+    .wrap{width:min(1120px,100% - 32px);}
+    .tl-row{grid-template-columns:96px 24px 1fr;column-gap:10px;}
+    .row2{grid-template-columns:1fr;}
+    .nav-cta{font-size:13px;padding:9px 13px;}
+    .stats-in{grid-template-columns:1fr;}
+    .foot{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="BlueFocusAI Singapore home">
+      <span class="bf-mark"><span class="b1">B</span><span class="b2">l</span><span class="b3">u</span><span class="b4">e</span><span class="b5">Focus</span><span class="b6">AI</span></span>
+      <span class="bf-sub">Singapore · AI Solutions</span>
+    </a>
+    <a class="nav-cta" href="#cta">Book a free diagnosis</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="top">
+  <div class="hero-blob" aria-hidden="true"></div>
+  <div class="wrap hero">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>Live in Singapore since 23 Sep 2026</span>
+      <h1>Be seen in <span class="accent">ChatGPT answers</span> before your competitors are.</h1>
+      <p class="sub">ChatGPT Ads are new in Singapore — and the playbook isn't written yet. We check your eligibility, design the campaigns, and run them end to end.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#cta">
+          Book a free readiness diagnosis
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+      <div class="hero-trust">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Facts checked against OpenAI policies</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>One point of contact</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Ads never change ChatGPT's answers</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="mock" role="img" aria-label="Example: a ChatGPT conversation with a sponsored catering ad below the answer">
+        <div class="mock-head">
+          <div class="m-logo">C</div>
+          <div class="m-title">ChatGPT</div>
+          <div class="m-plan">Free plan</div>
+        </div>
+        <div class="mock-body">
+          <div class="m-q">Where can I order a lunch buffet for 40 people in the CBD this Friday?</div>
+          <div class="m-a">
+            For 40 people, most offices go with a mini-buffet. Things to check when you order:
+            <ul>
+              <li>minimum advance notice: 2–3 working days</li>
+              <li>food cancellation at least 1 day before</li>
+            </ul>
+            Order by Wednesday to be safe for a Friday lunch.
+          </div>
+          <div class="m-ad">
+            <div>
+              <div class="ad-top">
+                <div class="ad-logo">L</div><span><b>LunchBox Catering</b></span><span class="ad-tag">Sponsored</span>
+              </div>
+              <h4>Office buffets for 20 to 200, set up on time.</h4>
+              <p>Local favourites, delivery for corporate events.</p>
+            </div>
+            <div class="ad-img"><img src="assets/creative-buffet.jpg" alt="Corporate buffet spread with satay and rice bowls"><span class="tag">Made-up brand</span></div>
+          </div>
+        </div>
+        <div class="mock-input">Ask anything <span class="send"><svg width="12" height="12" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M3 20L21 12 3 4v6l12 2-12 2z"/></svg></span></div>
+        <div class="mock-cap"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>Illustration — made-up brand, for format reference</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stats-in">
+      <div class="stat"><div class="n">23 Sep<em> 2026</em></div><div class="l">ChatGPT Ads live in Singapore</div></div>
+      <div class="stat"><div class="n">60+</div><div class="l">countries now served</div></div>
+      <div class="stat"><div class="n">Free &amp; Go</div><div class="l">plans see ads; paid tiers are ad-free</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">performance benchmarks yet — first movers define them</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ WHAT ARE CHATGPT ADS ============ -->
+<section id="what">
+  <div class="wrap what-grid">
+    <div>
+      <div class="sec-head" style="margin-bottom:16px;">
+        <div class="k">The format</div>
+        <h2>What ChatGPT Ads are</h2>
+        <p>Sponsored placements that appear below ChatGPT's answers — clearly labelled, kept separate from the answer, and shown only to users on Free and Go plans.</p>
+      </div>
+      <div class="facts">
+        <div class="fact">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c2.5 0 4 .5 5.5 1.5L21 3v9z"/><path d="M7 9h7M7 13h4"/></svg></div>
+          <div><b>Reach people mid-decision</b><p>Your ad appears while someone is comparing options in a real conversation — with context that matches your product.</p></div>
+        </div>
+        <div class="fact">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div><b>Pay per view, click or conversion</b><p>CPM for reach, CPC for traffic, or conversion-optimised campaigns billed per valid click.</p></div>
+        </div>
+        <div class="fact">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <div><b>Private by design</b><p>OpenAI never shares conversations with advertisers. Ads are kept away from sensitive chats.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anatomy">
+      <h3>Anatomy of an ad</h3>
+      <div class="ad-card">
+        <div>
+          <div class="ad-top">
+            <div class="ad-logo">H</div><span style="font-size:12.5px;"><b>Heirloom Groceries</b></span><span class="ad-tag">Sponsored</span>
+          </div>
+          <h4 style="font-family:var(--display);font-weight:700;font-size:15px;margin-top:8px;color:var(--navy);">Fresh meal kits, delivered for less.</h4>
+          <p style="font-size:12.5px;color:var(--muted);margin-top:3px;">Need healthy dinner fast? Weekly kits, islandwide delivery.</p>
+        </div>
+        <div class="ad-img2"><img src="assets/meal-kit.jpg" alt="Fresh meal kit ingredients with salmon and vegetables"><span class="tag">Made-up brand</span></div>
+      </div>
+      <div class="caps">
+        <span class="cap">Headline · ~16 characters</span>
+        <span class="cap">Description · ~32 characters</span>
+        <span class="cap">Creative · no logo-only images</span>
+        <span class="cap">Landing page</span>
+      </div>
+      <p class="note">Spec guidance from OpenAI's Help Center. Example uses a made-up brand.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEE IT IN ACTION ============ -->
+<section id="how">
+  <div class="wrap demo">
+    <div class="demo-copy">
+      <div class="k">See it in action</div>
+      <h2>Your business, in the conversation</h2>
+      <p>The ad appears at the moment someone asks ChatGPT for help with the thing you sell. It's labelled sponsored, and it never changes the answer above it.</p>
+      <ul>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Advertiser name, logo, headline, description, image and landing page</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Chosen by a relevance-weighted auction using conversation context and your context hints</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Context hints guide matching — they're not exact-match keywords</li>
+      </ul>
+    </div>
+    <div class="mock" role="img" aria-label="ChatGPT conversation about skincare with a sponsored ad for a moisturiser">
+      <div class="mock-head">
+        <div class="m-logo">C</div>
+        <div class="m-title">ChatGPT</div>
+        <div class="m-plan">Free plan</div>
+      </div>
+      <div class="mock-body">
+        <div class="m-q">What's a good moisturiser for oily skin in Singapore's humidity?</div>
+        <div class="m-a">
+          For humid weather, most people with oily skin do best with a light, water-based formula:
+          <ul>
+            <li>gel or gel-cream textures that absorb quickly</li>
+            <li>non-comedogenic, fragrance-free options</li>
+          </ul>
+          Try a small tub first and give it two to three weeks.
+        </div>
+        <div class="m-ad">
+          <div>
+            <div class="ad-top">
+              <div class="ad-logo">D</div><span><b>Dewbloom Skincare</b></span><span class="ad-tag">Sponsored</span>
+            </div>
+            <h4>Lightweight gel moisturisers for humid days.</h4>
+            <p>Made for Singapore weather. Free delivery over S$40.</p>
+          </div>
+          <div class="ad-img"><img src="assets/skincare-gel.jpg" alt="Frosted glass gel moisturiser jar with dewy texture"><span class="tag">Made-up brand</span></div>
+        </div>
+      </div>
+      <div class="mock-input">Ask anything <span class="send"><svg width="12" height="12" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M3 20L21 12 3 4v6l12 2-12 2z"/></svg></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY NOW ============ -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">First-mover window</div>
+      <h2>Why now — the window is open</h2>
+      <p>Singapore is one of the newest markets for ChatGPT Ads. Early advertisers are still experimenting, and there are no benchmarks to compare against. First movers set the reference points.</p>
+    </div>
+
+    <div class="tl">
+      <div class="tl-row">
+        <div class="tl-date">09 Feb 2026<small>US test starts</small></div>
+        <div class="axis"><span class="dot"></span></div>
+        <div class="tl-copy"><b>OpenAI begins testing ads in ChatGPT</b><p>The format is less than a year old.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">11 Aug 2026<small>5 more markets</small></div>
+        <div class="axis"><span class="dot"></span></div>
+        <div class="tl-copy"><b>Live in the UK, Mexico, Brazil, Japan and South Korea</b><p>Expansion accelerates through the year.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">10 Sep 2026<small>Ecosystem signal</small></div>
+        <div class="axis"><span class="dot"></span></div>
+        <div class="tl-copy"><b>Amazon Ads pilot lets US advertisers extend campaigns into ChatGPT</b><p>Big spend is beginning to move in.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">16 Sep 2026<small>Ecosystem signal</small></div>
+        <div class="axis"><span class="dot"></span></div>
+        <div class="tl-copy"><b>Shopify becomes OpenAI's first ecommerce partner</b><p>Retail formats are arriving — early movers win the shelf.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">23 Sep 2026<small>Singapore live</small></div>
+        <div class="axis"><span class="dot"></span></div>
+        <div class="tl-copy"><b>ChatGPT Ads launch in Singapore and 6 more SEA markets — 60+ countries in total</b><p>Most brands haven't started yet.</p></div>
+      </div>
+    </div>
+
+    <div class="chart-wrap">
+      <div class="chart-card">
+        <h3>Click-through rate by market</h3>
+        <div class="sub">All-time CTR, Free &amp; Go users, through 16 Sep · Similarweb panel data via Graphite / Search Engine Journal</div>
+        <div class="chart" id="ctr-chart" aria-label="Bar chart of ChatGPT ad click-through rate by market"></div>
+        <div class="chart-fallback" id="ctr-fallback" style="display:none;flex-direction:column;gap:6px;padding:8px 0;">
+          <div style="display:flex;align-items:center;gap:10px;"><span style="flex:0 0 92px;font-size:13px;">Brazil</span><span style="flex:1;height:16px;background:#EFF6FF;border-radius:3px;"><span style="display:block;width:100%;height:16px;background:#4285F4;border-radius:3px;"></span></span><b style="font-size:13px;">1.91%</b></div>
+          <div style="display:flex;align-items:center;gap:10px;"><span style="flex:0 0 92px;font-size:13px;">Mexico</span><span style="flex:1;height:16px;background:#EFF6FF;border-radius:3px;"><span style="display:block;width:81%;height:16px;background:#4285F4;border-radius:3px;"></span></span><b style="font-size:13px;">1.55%</b></div>
+          <div style="display:flex;align-items:center;gap:10px;"><span style="flex:0 0 92px;font-size:13px;">Japan</span><span style="flex:1;height:16px;background:#EFF6FF;border-radius:3px;"><span style="display:block;width:80%;height:16px;background:#4285F4;border-radius:3px;"></span></span><b style="font-size:13px;">1.53%</b></div>
+          <div style="display:flex;align-items:center;gap:10px;"><span style="flex:0 0 92px;font-size:13px;">S. Korea</span><span style="flex:1;height:16px;background:#EFF6FF;border-radius:3px;"><span style="display:block;width:63%;height:16px;background:#4285F4;border-radius:3px;"></span></span><b style="font-size:13px;">1.21%</b></div>
+          <div style="display:flex;align-items:center;gap:10px;"><span style="flex:0 0 92px;font-size:13px;">Canada</span><span style="flex:1;height:16px;background:#F2F8FA;border-radius:3px;"><span style="display:block;width:39%;height:16px;background:#5B9BD5;border-radius:3px;"></span></span><b style="font-size:13px;">0.75%</b></div>
+          <div style="display:flex;align-items:center;gap:10px;"><span style="flex:0 0 92px;font-size:13px;">UK</span><span style="flex:1;height:16px;background:#F2F8FA;border-radius:3px;"><span style="display:block;width:39%;height:16px;background:#5B9BD5;border-radius:3px;"></span></span><b style="font-size:13px;">0.74%</b></div>
+          <div style="display:flex;align-items:center;gap:10px;"><span style="flex:0 0 92px;font-size:13px;">US</span><span style="flex:1;height:16px;background:#F2F8FA;border-radius:3px;"><span style="display:block;width:38%;height:16px;background:#5B9BD5;border-radius:3px;"></span></span><b style="font-size:13px;">0.73%</b></div>
+          <div style="display:flex;align-items:center;gap:10px;"><span style="flex:0 0 92px;font-size:13px;">Australia</span><span style="flex:1;height:16px;background:#F2F8FA;border-radius:3px;"><span style="display:block;width:35%;height:16px;background:#5B9BD5;border-radius:3px;"></span></span><b style="font-size:13px;">0.67%</b></div>
+          <div style="display:flex;align-items:center;gap:10px;"><span style="flex:0 0 92px;font-size:13px;">NZ</span><span style="flex:1;height:16px;background:#F2F8FA;border-radius:3px;"><span style="display:block;width:31%;height:16px;background:#5B9BD5;border-radius:3px;"></span></span><b style="font-size:13px;">0.60%</b></div>
+        </div>
+      </div>
+      <div class="insights">
+        <div class="insight"><b>Advertisers are still experimenting</b><p>Only two brands stayed in the top-10 by impressions every week for 20 straight weeks.</p></div>
+        <div class="insight"><b>Retail is under-advertised</b><p>B2B SaaS took 19.9% of US impressions vs 10.4% for retail &amp; consumer brands. The ecommerce shelf is wide open.</p></div>
+        <div class="insight"><b>No benchmarks exist yet</b><p>OpenAI confirms there are no cross-advertiser performance benchmarks. Early entrants define what "good" looks like.</p></div>
+      </div>
+    </div>
+
+    <p class="chart-note"><b>Read the numbers honestly:</b> these are market-level pooled CTRs (clicks ÷ ad-bearing replies), not per-campaign benchmarks — each market covers 5–25 weeks of data. Use them to make the case for timing, never to promise a client's CTR. Source: <a href="https://www.searchenginejournal.com/chatgpt-ad-ctr-markets-report/591384/" style="color:var(--brand);font-weight:700;">Search Engine Journal, 29 Sep 2026</a>.</p>
+  </div>
+</section>
+
+<!-- ============ OUR APPROACH ============ -->
+<section id="approach">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="k">Our approach</div>
+      <h2>Diagnosis first. Then the right service, run end to end.</h2>
+      <p>We start with a free diagnosis that finds where your brand shows up in AI answers — and where it doesn't. The gap becomes the plan.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="num">01</div><b>Free diagnosis</b><p>Survey brief; we find the gap in your AI-search visibility.</p></div>
+      <div class="step"><div class="num">02</div><b>Gap confirmed</b><p>The challenge becomes the opportunity.</p></div>
+      <div class="step"><div class="num">03</div><b>Solution design</b><p>PR · OpenAI Ads · SEO+SEM · Media, matched to your business.</p></div>
+      <div class="step"><div class="num">04</div><b>Launch &amp; managed ops</b><p>Campaigns, context hints, creative and tracking.</p></div>
+      <div class="step"><div class="num">05</div><b>Sales-oriented report</b><p>Clear SLA: survey in, report out — material you can act on.</p></div>
+    </div>
+
+    <div class="approach-mid">
+      <div class="services">
+        <div class="service">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l18-7-7 18-2.5-7.5L3 11z"/></svg></div>
+          <b>GEO + PR</b><p>Branding clients: mention-rate lift through earned coverage.</p>
+        </div>
+        <div class="service">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c2.5 0 4 .5 5.5 1.5L21 3v9z"/></svg></div>
+          <b>GEO + OpenAI Ads</b><p>Ecommerce, retail and brand clients: campaigns that close the gap.</p>
+        </div>
+        <div class="service">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <b>GEO + SEO / SEM</b><p>One overall search strategy across AI answers and blue links.</p>
+        </div>
+        <div class="service">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <b>GEO + Media</b><p>KOL and media buying for brands with social operations.</p>
+        </div>
+      </div>
+      <div class="sky-card">
+        <img src="assets/sg-skyline.jpg" alt="Singapore Marina Bay skyline at dusk">
+        <div class="ov">
+          <b>BlueFocus Singapore</b>
+          <small>Part of a global group · one local team, one point of contact</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="vert-line"><b>Built for the verticals where ChatGPT advice matters most:</b>
+      <div class="vert-chips">
+        <span class="vchip">Ecommerce</span><span class="vchip">Travel</span><span class="vchip">B2B services</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING & FAQ ============ -->
+<section id="pricing">
+  <div class="wrap pf">
+    <div>
+      <div class="sec-head" style="margin-bottom:20px;">
+        <div class="k">How it's paid</div>
+        <h2>Simple, transparent pricing</h2>
+        <p>You choose the model; we run the campaigns and report against it.</p>
+      </div>
+      <div class="price-cards">
+        <div class="price"><div class="pm">Reach</div><div class="pd"><b>CPM</b> — pay per 1,000 views when awareness is the goal.</div></div>
+        <div class="price"><div class="pm">Clicks</div><div class="pd"><b>CPC</b> — pay per click to drive traffic.</div></div>
+        <div class="price"><div class="pm">Conversions</div><div class="pd"><b>oCPC</b> — conversion-optimised, billed per valid click.</div></div>
+      </div>
+      <p class="price-note">OpenAI suggests starting with a maximum bid of US$3–5 per click. A daily budget averages over 7 days: one day can spend up to 2×, but a week never exceeds 7×.</p>
+    </div>
+
+    <div>
+      <div class="sec-head" style="margin-bottom:20px;">
+        <div class="k">FAQ</div>
+        <h2>Quick answers</h2>
+      </div>
+      <details open>
+        <summary>Who sees ChatGPT Ads?<span class="tgl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <div class="faq-a">Users on the Free and Go plans. Plus, Pro, Business and Enterprise are ad-free, and ads are not shown to accounts identified as under 18.</div>
+      </details>
+      <details>
+        <summary>Do ads change ChatGPT's answers?<span class="tgl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <div class="faq-a">No. Ads run on separate systems from the chat model. Advertisers have no ability to shape, rank or alter answers.</div>
+      </details>
+      <details>
+        <summary>Is my data shared with advertisers?<span class="tgl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <div class="faq-a">No. OpenAI never shares conversations with advertisers and never sells user data. Advertisers see only aggregated, non-identifying performance.</div>
+      </details>
+      <details>
+        <summary>Where do ads appear?<span class="tgl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <div class="faq-a">Below ChatGPT's answers, clearly labelled sponsored. Not in the Atlas browser, not in Temporary Chats, and not near sensitive topics like personal health or politics.</div>
+      </details>
+      <details>
+        <summary>What does the diagnosis cost?<span class="tgl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <div class="faq-a">Nothing. The readiness diagnosis is free — you get an eligibility check, a campaign outline and a benchmark snapshot, with a clear SLA for the report.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section id="cta">
+  <div class="wrap cta-in">
+    <div class="cta-copy">
+      <h2>Get your free ChatGPT Ads readiness diagnosis</h2>
+      <p>Tell us about your business. We'll check eligibility, review the ad format fit, and come back with a campaign outline and a benchmark snapshot — within an agreed SLA.</p>
+      <ul class="promise">
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Eligibility check against OpenAI's current policies</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Campaign outline with context hints and creative guidance</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Benchmark snapshot of what the market is doing</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>One point of contact in Singapore</li>
+      </ul>
+    </div>
+
+    <form id="diag-form" novalidate>
+      <h3>Book the diagnosis</h3>
+      <p class="fsub">We reply within 2 working days.</p>
+      <div class="field">
+        <label for="f-company">Company</label>
+        <input id="f-company" name="company" type="text" placeholder="e.g. Acme Trading" required>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label for="f-vert">Vertical</label>
+          <select id="f-vert" name="vertical">
+            <option value="">Choose one</option>
+            <option>Ecommerce / retail</option>
+            <option>Travel</option>
+            <option>B2B services</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-spend">Monthly ad spend</label>
+          <select id="f-spend" name="spend">
+            <option value="">Choose one</option>
+            <option>Under S$5k</option>
+            <option>S$5k–20k</option>
+            <option>S$20k–50k</option>
+            <option>Over S$50k</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-goal">What would you want the diagnosis to answer?</label>
+        <textarea id="f-goal" name="goal" rows="3" placeholder="e.g. We want more qualified leads from people comparing options in ChatGPT."></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" style="background:var(--navy);">
+        Request my diagnosis
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="f-note">Demo page — submissions aren't sent anywhere yet. Add your CRM or form service before launch.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="#top" aria-label="BlueFocusAI Singapore home">
+        <span class="bf-mark"><span class="b1">B</span><span class="b2">l</span><span class="b3">u</span><span class="b4">e</span><span class="b5">Focus</span><span class="b6">AI</span></span>
+      </a>
+      <p class="legal">BlueMedia Singapore Pte Ltd, a BlueFocus Communication Group company</p>
+      <p class="ai-line">"AI-powered marketing solutions that drive creative excellence and measurable results across every channel."</p>
+      <p>Facts on this page are verified against OpenAI's Ad Policies and Help Center (26 Sep 2026). Product details evolve — please re-verify before launch. Example ads use made-up brands for illustration. Skyline photo: Irish Examiner.</p>
+    </div>
+    <div>
+      <div class="flinks">
+        <a href="#what">The format</a>
+        <a href="#why">Why now</a>
+        <a href="#approach">Our approach</a>
+        <a href="#cta">Book a diagnosis</a>
+      </div>
+      <div class="palette" style="margin-top:16px;" aria-label="BlueFocus brand palette">
+        <i class="o"></i><i class="b"></i><i class="g"></i><i class="n"></i><i class="s"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" role="status">Thanks — we'd reply within 2 working days (demo mode).</div>
+
+<script>
+(function(){
+  'use strict';
+  /* ---------- CTR chart: ECharts with static fallback ---------- */
+  var labels=['Brazil','Mexico','Japan','South Korea','Canada','UK','US','Australia','New Zealand'];
+  var values=[1.91,1.55,1.53,1.21,0.75,0.74,0.73,0.67,0.60];
+  var box=document.getElementById('ctr-chart');
+  var fb=document.getElementById('ctr-fallback');
+  function drawEcharts(){
+    if(!box || typeof window.echarts==='undefined'){ return false; }
+    var chart=window.echarts.init(box);
+    chart.setOption({
+      grid:{left:8,right:36,top:12,bottom:8,containLabel:true},
+      xAxis:{type:'value',axisLine:{lineStyle:{color:'#DBEAFF'}},axisLabel:{color:'#5A6B8C',fontSize:11},splitLine:{lineStyle:{color:'#EFF6FF'}}},
+      yAxis:{type:'category',data:labels.slice().reverse(),axisLine:{lineStyle:{color:'#DBEAFF'}},axisLabel:{color:'#31538F',fontSize:12,fontWeight:700}},
+      series:[{
+        type:'bar',
+        data:values.slice().reverse().map(function(v){
+          return {value:v,itemStyle:{color:v>=1.2?'#4285F4':'#5B9BD5',borderRadius:[0,6,6,0]}};
+        }),
+        barWidth:'58%',
+        label:{show:true,position:'right',fontSize:11,fontWeight:700,color:'#31538F',formatter:function(p){return p.value.toFixed(2)+'%';}}
+      }],
+      tooltip:{trigger:'axis',axisPointer:{type:'shadow'},confine:true,
+        formatter:function(ps){var d=ps[0];return d.name+'<br/><b>'+d.value.toFixed(2)+'%</b> all-time CTR';}}
+    });
+    return true;
+  }
+  function drawFallback(){ if(fb){ fb.style.display='flex'; } if(box){ box.style.display='none'; } }
+  var cdn='https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js';
+  var s=document.createElement('script');
+  s.src=cdn;
+  s.onload=function(){ if(!drawEcharts()){ drawFallback(); } };
+  s.onerror=function(){ drawFallback(); };
+  document.head.appendChild(s);
+
+  /* ---------- form demo ---------- */
+  var form=document.getElementById('diag-form');
+  var toast=document.getElementById('toast');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var company=document.getElementById('f-company');
+      var vert=document.getElementById('f-vert');
+      var spend=document.getElementById('f-spend');
+      if(!company.value.trim()){ company.focus(); company.style.borderColor='#F53C00'; return; }
+      company.style.borderColor='';
+      var msg='Thanks, '+(company.value.trim().split(' ')[0]||'there')+' — we\'d reply within 2 working days (demo mode).';
+      if(toast){ toast.textContent=msg; toast.classList.add('show'); setTimeout(function(){ toast.classList.remove('show'); },4200); }
+      form.reset();
+    });
+  }
+})();
+</script>
+</body>
+</html>
