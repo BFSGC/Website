@@ -12,7 +12,7 @@
 :root{
   --navy:#31538F; --blue:#4285F4; --cyan:#00A3FF; --ai:#5B9BD5;
   --pale:#EFF6FF; --pale2:#DBEAFF; --bg:#F2F8FA; --bg2:#E8EBF5;
-  --ink:#1F2B45; --gray:#5A6B8C; --line:#D7E2F0;
+  --ink:#1F2B45; --ink-soft:#4A5E84; --gray:#5A6B8C; --line:#D7E2F0;
   --orange:#FFAB40; --gold:#FFC000; --red:#F53C00; --green:#00D321;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -39,9 +39,8 @@ small{color:var(--gray)}
 .brand .wm .b{color:var(--blue)}.brand .wm .l{color:var(--gold)}.brand .wm .e{color:var(--red)}.brand .wm .f{color:var(--green)}
 .brand .wm .ocus{color:var(--blue)}.brand .wm .ai{color:var(--ai)}
 .brand .sub{font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.08em}
-.nav-links{display:flex;gap:22px;align-items:center}
-.nav-links a{font-size:13.5px;font-weight:600;color:var(--ink);transition:color .15s}
-.nav-links a:hover{color:var(--blue)}
+.brand-logo{display:inline-flex;align-items:center}
+.brand-logo img{height:36px;width:auto;display:block}
 .nav .btn{margin-left:auto}
 .btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-weight:700;font-size:14.5px;padding:13px 22px;border-radius:10px;border:0;cursor:pointer;transition:background .15s,transform .1s}
 .btn:hover{background:#27437A;transform:translateY(-1px)}
@@ -161,7 +160,6 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
   .four{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr}
   .three{grid-template-columns:1fr}
-  .nav-links{display:none}
 }
 @media (max-width:640px){
   h1{font-size:30px}
@@ -172,6 +170,7 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
   .trust{gap:14px}
   .banner{padding:44px 26px}
   .banner h2{font-size:29px}
+  .brand-logo img{height:28px}
 }
 </style>
 </head>
@@ -180,14 +179,7 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
 <!-- ===== NAV ===== -->
 <header class="nav">
   <div class="wrap nav-in">
-    <nav class="nav-links">
-      <a href="#format">The Format</a>
-      <a href="#examples">Examples</a>
-      <a href="#eligibility">Eligibility</a>
-      <a href="#pricing">How It's Paid</a>
-      <a href="#process">Process</a>
-      <a href="#faq">FAQ</a>
-    </nav>
+    <a class="brand-logo" href="https://singapore.bluemediagrp.com/#home" target="_blank" rel="noopener"><img src="assets/bfsg-logo.png" alt="BlueFocus Singapore"></a>
     <a class="btn" href="https://singapore.bluemediagrp.com/#contact" target="_blank" rel="noopener">Book free diagnosis</a>
   </div>
 </header>
@@ -202,7 +194,7 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
       <p class="sub">It launched recently in Singapore — and early slots are still uncrowded. We check your eligibility, launch your first campaign and report on <b>cost per enquiry</b>, not vanity numbers. One Singapore team, one point of contact.</p>
       <div class="hero-ctas">
         <a class="btn blue" href="https://singapore.bluemediagrp.com/#contact" target="_blank" rel="noopener">Book a free readiness diagnosis</a><!-- Links to the company-site enquiry page: singapore.bluemediagrp.com/#contact -->
-        <button class="btn ghost" onclick="go('format')">See how it works</button>
+        <a class="btn ghost" href="https://singapore.bluemediagrp.com/#contact" target="_blank" rel="noopener">See how it works</a>
       </div>
       <div class="trust">
         <div><span class="dot"></span>Facts checked vs OpenAI policies</div>
@@ -354,7 +346,7 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
     <div class="callout">
       <h3>A clinic, law firm or financial firm? Get recommended in the answer instead.</h3>
       <p>You can't buy the ad slot in Singapore yet — but you can earn a place in the answer itself. Our <b>GEO + PR</b> work makes your practice the one ChatGPT, Perplexity and Google's AI Overviews cite when patients and clients ask. We'll also set up your account the day your category opens.</p>
-      <button class="btn ghost" onclick="toast('GEO &amp; PR walkthrough coming soon in this mockup')">See GEO &amp; PR</button>
+      <a class="btn ghost" href="https://singapore.bluemediagrp.com/#contact" target="_blank" rel="noopener">See GEO &amp; PR</a>
     </div>
   </div>
 </section>
@@ -544,12 +536,12 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
         <div class="label" style="color:var(--cyan)">Get Started</div>
         <h2>The window is open — first movers set the standard</h2>
         <p>A 20-minute call: we check your eligibility, what a sensible test budget looks like and what to track. No obligation.</p>
-        <div class="form-card" style="max-width:560px;background:rgba(255,255,255,.97)">
-          <p style="margin:0 0 6px;font-weight:700">Ready to see your slot?</p>
-          <p style="margin:0 0 18px;color:var(--ink-soft);font-size:14.5px">Book the free readiness diagnosis — the button takes you to our enquiry page, and the team gets back to you within one working day.</p>
+        <div class="form-card" style="max-width:560px;background:rgba(23,41,84,.82);border-color:rgba(255,255,255,.22)">
+          <p style="margin:0 0 6px;font-weight:700;color:#fff">Ready to see your slot?</p>
+          <p style="margin:0 0 18px;color:#DCE6F5;font-size:14.5px">Book the free readiness diagnosis — the button takes you to our enquiry page, and the team gets back to you within one working day.</p>
           <a class="btn blue" style="width:100%;justify-content:center" href="https://singapore.bluemediagrp.com/#contact" target="_blank" rel="noopener">Book a free ChatGPT Ads readiness diagnosis</a>
           <!-- Links to the company-site enquiry page: singapore.bluemediagrp.com/#contact -->
-          <p style="margin:12px 0 0;font-size:13px;color:var(--ink-soft)">Prefer email or WhatsApp? Contact details to be confirmed with the team.</p>
+          <p style="margin:12px 0 0;font-size:13px;color:#AFC4E6">Prefer email or WhatsApp? Contact details to be confirmed with the team.</p>
         </div>
       </div>
     </div>
