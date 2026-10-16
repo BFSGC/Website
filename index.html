@@ -2,7 +2,8 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
 <title>ChatGPT Ads in Singapore — BlueFocus Singapore</title>
 <meta name="description" content="Meet your next customers inside the conversation — ChatGPT Ads in Singapore via an official OpenAI partnership. We check eligibility, launch your first campaign and report on cost per enquiry. BlueFocus Singapore.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234285F4'/%3E%3Cpath d='M16 46V18h11c9 0 15 5 15 14s-6 14-15 14h-11zm9-8h2c4 0 6-2 6-6s-2-6-6-6h-2v12z' fill='%23fff'/%3E%3Ccircle cx='47' cy='19' r='7' fill='%2300A3FF'/%3E%3C/svg%3E">
@@ -17,7 +18,9 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Montserrat','Poppins',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+section[id]{scroll-margin-top:82px}
+button,input,select,textarea{font-family:inherit;-webkit-appearance:none;appearance:none}
+body{font-family:'Montserrat','Poppins',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
 img{display:block;max-width:100%}
 a{color:var(--blue);text-decoration:none}
 .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
@@ -32,7 +35,7 @@ h3{font-size:18px}
 p{color:var(--ink)}
 small{color:var(--gray)}
 /* ---------- nav ---------- */
-.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;align-items:center;gap:28px;height:66px}
 .brand{display:flex;align-items:baseline;gap:10px}
 .brand .wm{font-size:20px;font-weight:800;letter-spacing:-.02em}
@@ -42,7 +45,7 @@ small{color:var(--gray)}
 .brand-logo{display:inline-flex;align-items:center}
 .brand-logo img{height:36px;width:auto;display:block}
 .nav .btn{margin-left:auto}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-weight:700;font-size:14.5px;padding:13px 22px;border-radius:10px;border:0;cursor:pointer;transition:background .15s,transform .1s}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-weight:700;font-size:14.5px;padding:13px 22px;border-radius:10px;border:0;cursor:pointer;transition:background .15s,transform .1s;font-family:inherit;white-space:nowrap;text-align:center}
 .btn:hover{background:#27437A;transform:translateY(-1px)}
 .btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
 .btn.ghost:hover{background:var(--pale)}
@@ -137,7 +140,7 @@ td b{color:var(--navy)}
 /* footer */
 footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
 .foot-src{font-size:12px;color:#AFC4E6;max-width:640px}
-.foot-src a{color:#C9DBF8;overflow-wrap:anywhere;word-break:break-word}
+.foot-src a{color:#C9DBF8;overflow-wrap:anywhere;word-break:break-all}
 .foot-src li{margin:5px 0;list-style:none}
 /* chart fallback */
 .fallback-bars{width:100%}
@@ -207,6 +210,7 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
   .brand-logo img{width:96px}
   .nav-in{gap:8px}
   .nav .btn{font-size:12px;padding:9px 10px}
+  .banner .btn{font-size:12.5px;padding:11px 14px;white-space:normal}
 }
 </style>
 </head>
@@ -230,7 +234,7 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
       <p class="sub">It launched recently in Singapore — and early slots are still uncrowded. We check your eligibility, launch your first campaign and report on <b>cost per enquiry</b>, not vanity numbers. One Singapore team, one point of contact.</p>
       <div class="hero-ctas">
         <a class="btn blue" href="https://singapore.bluemediagrp.com/#contact" target="_blank" rel="noopener">Book a free readiness diagnosis</a><!-- Links to the company-site enquiry page: singapore.bluemediagrp.com/#contact -->
-        <button class="btn ghost" onclick="go('format')">See how it works</button>
+        <a class="btn ghost" href="#format">See how it works</a>
       </div>
       <div class="trust">
         <div><span class="dot"></span>Facts checked vs OpenAI policies</div>
@@ -603,7 +607,6 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
 <div id="toast" style="position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(80px);background:var(--navy);color:#fff;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:600;opacity:0;transition:all .3s;z-index:99;box-shadow:0 10px 30px rgba(49,83,143,.35);pointer-events:none"></div>
 
 <script>
-function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
 var toastEl=document.getElementById('toast');
 function toast(m){toastEl.textContent=m;toastEl.style.opacity='1';toastEl.style.transform='translateX(-50%) translateY(0)';clearTimeout(toastEl._t);toastEl._t=setTimeout(function(){toastEl.style.opacity='0';toastEl.style.transform='translateX(-50%) translateY(80px)'},2600)}
 function faq(btn){var item=btn.parentElement;var a=item.querySelector('.faq-a');var open=item.classList.contains('open');
