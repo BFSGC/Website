@@ -234,7 +234,7 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
       <p class="sub">It launched recently in Singapore — and early slots are still uncrowded. We check your eligibility, launch your first campaign and report on <b>cost per enquiry</b>, not vanity numbers. One Singapore team, one point of contact.</p>
       <div class="hero-ctas">
         <a class="btn blue" href="https://singapore.bluemediagrp.com/#contact" target="_blank" rel="noopener">Book a free readiness diagnosis</a><!-- Links to the company-site enquiry page: singapore.bluemediagrp.com/#contact -->
-        <a class="btn ghost" href="#format">See how it works</a>
+        <a class="btn ghost" href="#format" onclick="return go('format')">See how it works</a>
       </div>
       <div class="trust">
         <div><span class="dot"></span>Facts checked vs OpenAI policies</div>
@@ -607,6 +607,14 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
 <div id="toast" style="position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(80px);background:var(--navy);color:#fff;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:600;opacity:0;transition:all .3s;z-index:99;box-shadow:0 10px 30px rgba(49,83,143,.35);pointer-events:none"></div>
 
 <script>
+function go(id){
+  var el=document.getElementById(id);
+  if(!el)return true;
+  var y=el.getBoundingClientRect().top+(window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0)-82;
+  if(y<0)y=0;
+  try{window.scrollTo({top:y,behavior:'smooth'})}catch(e){window.scrollTo(0,y)}
+  return false;
+}
 var toastEl=document.getElementById('toast');
 function toast(m){toastEl.textContent=m;toastEl.style.opacity='1';toastEl.style.transform='translateX(-50%) translateY(0)';clearTimeout(toastEl._t);toastEl._t=setTimeout(function(){toastEl.style.opacity='0';toastEl.style.transform='translateX(-50%) translateY(80px)'},2600)}
 function faq(btn){var item=btn.parentElement;var a=item.querySelector('.faq-a');var open=item.classList.contains('open');
