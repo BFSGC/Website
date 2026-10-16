@@ -137,7 +137,7 @@ td b{color:var(--navy)}
 /* footer */
 footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
 .foot-src{font-size:12px;color:#AFC4E6;max-width:640px}
-.foot-src a{color:#C9DBF8}
+.foot-src a{color:#C9DBF8;overflow-wrap:anywhere;word-break:break-word}
 .foot-src li{margin:5px 0;list-style:none}
 /* chart fallback */
 .fallback-bars{width:100%}
@@ -147,6 +147,8 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
 .fbar .fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
 .fbar .v{width:44px;font-weight:700;color:var(--blue);flex:none}
 .chart-cap{font-size:12px;color:var(--gray);margin-top:12px}
+/* table scroll container */
+.table-scroll{overflow-x:auto}
 /* banner */
 .banner{position:relative;border-radius:20px;overflow:hidden;background:var(--navy);color:#fff;padding:64px 56px}
 .banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28}
@@ -162,15 +164,49 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
   .three{grid-template-columns:1fr}
 }
 @media (max-width:640px){
-  h1{font-size:30px}
-  h2{font-size:26px}
+  h1{font-size:28px}
+  h2{font-size:24px}
+  section{padding:48px 0}
+  .wrap{padding:0 20px}
+  .lead{font-size:15.5px;margin-bottom:22px}
   .two,.four,.check-grid,.form-row{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
-  .hero h1{font-size:32px}
-  .trust{gap:14px}
-  .banner{padding:44px 26px}
-  .banner h2{font-size:29px}
-  .brand-logo img{height:28px}
+  .hero{padding:48px 0 56px}
+  .hero h1{font-size:29px}
+  .hero .sub{font-size:15.5px}
+  .trust{gap:12px}
+  .trust div{font-size:12.5px}
+  .card{padding:18px 16px}
+  .callout{padding:18px 16px;margin-top:20px}
+  /* nav: prevent CTA clipping on small screens */
+  .brand-logo{flex:none}
+  .nav-in{gap:10px}
+  .brand-logo img{width:112px;height:auto;flex:none}
+  .nav .btn{padding:10px 12px;font-size:12.5px;white-space:nowrap}
+  /* OpenAI badge: readable when wrapped */
+  .oai-badge{max-width:100%;min-width:0;align-items:flex-start;border-radius:14px;padding:9px 12px;line-height:1.35}
+  .oai-badge img{margin-top:2px}
+  .oai-badge span{font-size:12px;min-width:0}
+  /* hero column must never exceed the wrap */
+  #top .hero-grid>div{min-width:0}
+  .mockup{min-width:0}
+  /* comparison table: stack as cards */
+  .table-scroll{overflow-x:visible}
+  #compare table,#compare thead,#compare tbody,#compare tr,#compare th,#compare td{display:block}
+  #compare thead{display:none}
+  #compare table{border:0}
+  #compare tbody{display:grid;gap:14px}
+  #compare tr{background:#fff;border:1px solid var(--line);border-radius:14px;padding:4px 0;box-shadow:0 8px 20px rgba(49,83,143,.06)}
+  #compare td{border:0;padding:10px 16px;font-size:13.5px}
+  #compare td:first-child{font-weight:800;color:var(--navy);background:var(--bg2);border-radius:14px 14px 0 0;padding:12px 16px}
+  #compare td[data-label]::before{content:attr(data-label);display:block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);margin-bottom:3px}
+  .banner{padding:40px 20px}
+  .banner h2{font-size:26px}
+}
+@media (max-width:400px){
+  .brand-logo img{width:96px}
+  .nav-in{gap:8px}
+  .nav .btn{font-size:12px;padding:9px 10px}
 }
 </style>
 </head>
@@ -375,17 +411,17 @@ footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
     <div class="label">Choose Your Channel</div>
     <h2>ChatGPT Ads vs Google Ads vs AEO</h2>
     <p class="lead">They reach people at different moments, so the best plan usually uses more than one. Here's how they compare.</p>
-    <div style="overflow-x:auto">
+    <div class="table-scroll">
     <table>
       <colgroup><col style="width:22%"><col style="width:28%"><col style="width:26%"><col style="width:24%"></colgroup>
       <thead><tr><th></th><th>ChatGPT Ads</th><th>Google Search Ads</th><th>AEO &amp; GEO (organic AI visibility)</th></tr></thead>
       <tbody>
-        <tr><td><b>Where you appear</b></td><td>Below ChatGPT's answer, labelled sponsored</td><td>Above and below Google results</td><td>Inside the answers of ChatGPT, Perplexity, Gemini and Google AI Overviews</td></tr>
-        <tr><td><b>How you're matched</b></td><td>Conversation context, landing page and your context hints</td><td>Keywords the searcher types</td><td>How well your content answers, and how much AI trusts your brand</td></tr>
-        <tr><td><b>You pay</b></td><td>Per view, per click, or conversion-optimised per click</td><td>Per click</td><td>For the work, not for each visit</td></tr>
-        <tr><td><b>Speed</b></td><td>Days, once approved</td><td>Days</td><td>Weeks to months — and it compounds</td></tr>
-        <tr><td><b>Clinics &amp; law firms in Singapore?</b></td><td>Not yet</td><td>Yes, within MOH and Law Society rules</td><td>Yes</td></tr>
-        <tr><td><b>Best for</b></td><td>Being first to a new, uncrowded slot while buyers compare</td><td>People searching with clear intent now</td><td>Being the business AI recommends, long term</td></tr>
+        <tr><td><b>Where you appear</b></td><td data-label="ChatGPT Ads">Below ChatGPT's answer, labelled sponsored</td><td data-label="Google Search Ads">Above and below Google results</td><td data-label="AEO & GEO (organic AI visibility)">Inside the answers of ChatGPT, Perplexity, Gemini and Google AI Overviews</td></tr>
+        <tr><td><b>How you're matched</b></td><td data-label="ChatGPT Ads">Conversation context, landing page and your context hints</td><td data-label="Google Search Ads">Keywords the searcher types</td><td data-label="AEO & GEO (organic AI visibility)">How well your content answers, and how much AI trusts your brand</td></tr>
+        <tr><td><b>You pay</b></td><td data-label="ChatGPT Ads">Per view, per click, or conversion-optimised per click</td><td data-label="Google Search Ads">Per click</td><td data-label="AEO & GEO (organic AI visibility)">For the work, not for each visit</td></tr>
+        <tr><td><b>Speed</b></td><td data-label="ChatGPT Ads">Days, once approved</td><td data-label="Google Search Ads">Days</td><td data-label="AEO & GEO (organic AI visibility)">Weeks to months — and it compounds</td></tr>
+        <tr><td><b>Clinics &amp; law firms in Singapore?</b></td><td data-label="ChatGPT Ads">Not yet</td><td data-label="Google Search Ads">Yes, within MOH and Law Society rules</td><td data-label="AEO & GEO (organic AI visibility)">Yes</td></tr>
+        <tr><td><b>Best for</b></td><td data-label="ChatGPT Ads">Being first to a new, uncrowded slot while buyers compare</td><td data-label="Google Search Ads">People searching with clear intent now</td><td data-label="AEO & GEO (organic AI visibility)">Being the business AI recommends, long term</td></tr>
       </tbody>
     </table>
     </div>
