@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>GEO — Generative Engine Optimization (Compact Edition) | BlueFocus Singapore</title>
+<meta name="description" content="Make your brand the one AI recommends across ChatGPT, Perplexity, Gemini, DeepSeek and Doubao. Fully-managed, measurable GEO from Singapore — Western and Chinese engines, one team. Free AI-visibility check.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2331538F'/%3E%3Cpath d='M18 44V20h7l11 16V20h7v24h-7L25 28v16h-7z' fill='%23fff'/%3E%3Ccircle cx='47' cy='19' r='6' fill='%2300A3FF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --navy:#31538F; --blue:#4285F4; --cyan:#00A3FF; --ai:#5B9BD5;
+  --pale:#EFF6FF; --pale2:#DBEAFF; --bg:#F2F8FA; --bg2:#E8EBF5;
+  --ink:#1F2B45; --ink-soft:#4A5E84; --gray:#5A6B8C; --line:#D7E2F0;
+  --orange:#FFAB40; --gold:#FFC000; --red:#F53C00; --green:#00D321;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:82px}
+button,input,select,textarea{font-family:inherit;-webkit-appearance:none;appearance:none}
+body{font-family:'Montserrat','Poppins',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+img{display:block;max-width:100%}
+a{color:var(--blue);text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:76px 0}
+.label{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+h1,h2,h3{color:var(--navy);font-weight:800;line-height:1.15;letter-spacing:-.01em}
+h1{font-size:44px}
+h2{font-size:31px;margin-bottom:18px}
+h3{font-size:18px}
+.lead{font-size:17px;color:var(--gray);max-width:760px;margin-bottom:28px}
+.lead b{color:var(--ink)}
+p{color:var(--ink)}
+small{color:var(--gray)}
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:28px;height:66px}
+.brand-logo{display:inline-flex;align-items:center}
+.brand-logo img{height:36px;width:auto;display:block}
+.nav .btn{margin-left:auto}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-weight:700;font-size:14.5px;padding:13px 22px;border-radius:10px;border:0;cursor:pointer;transition:background .15s,transform .1s;font-family:inherit;white-space:nowrap;text-align:center}
+.btn:hover{background:#27437A;transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.btn.ghost:hover{background:var(--pale)}
+.btn.blue{background:var(--blue)}
+.btn.blue:hover{background:#3173E0}
+/* ---------- hero ---------- */
+.hero{background:linear-gradient(180deg,var(--bg) 0%,#fff 100%);padding:84px 0 96px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero .label{margin-bottom:16px}
+.hero h1{font-size:46px;margin-bottom:18px}
+.hero h1 .hl{color:var(--blue)}
+.hero .sub{font-size:17px;color:var(--gray);max-width:520px;margin-bottom:30px}
+.hero .sub b{color:var(--ink)}
+.engine-row{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 22px}
+.engine-pill{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--navy);background:#fff;border:1px solid var(--pale2);border-radius:999px;padding:6px 13px;white-space:nowrap}
+.engine-pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cyan);flex:none}
+.engine-pill.dim{background:transparent;border:1px dashed var(--line);color:var(--gray)}
+.engine-pill.dim::before{background:var(--gray)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.trust{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
+.trust div{font-size:13px;color:var(--gray);display:flex;align-items:center;gap:9px}
+.trust b{color:var(--navy);font-weight:800}
+.trust .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);flex:none}
+/* AI answer mockup */
+.mockup{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(49,83,143,.14);overflow:hidden}
+.mock-head{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--bg2);font-size:12px;color:var(--gray)}
+.mock-head .d{width:10px;height:10px;border-radius:50%;background:var(--bg2)}
+.mock-head .sp{flex:1;font-weight:600}
+.mock-head .tag{font-size:10.5px;font-weight:700;color:var(--ai);background:var(--pale);border-radius:999px;padding:3px 9px}
+.mock-body{padding:18px 20px 14px}
+.q{font-size:14.5px;font-weight:700;color:var(--ink);background:var(--bg);border-radius:12px 12px 12px 2px;padding:10px 14px;margin-bottom:12px}
+.a{font-size:13.5px;color:var(--ink);background:var(--pale);border-radius:12px 12px 2px 12px;padding:12px 14px;margin-bottom:14px}
+.rec{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;margin:6px 0;font-size:13.5px}
+.rec .rk{font-weight:800;color:var(--gray);width:18px;flex:none}
+.rec.win{background:#fff;border:1.5px solid var(--blue);box-shadow:0 6px 16px rgba(66,133,244,.14)}
+.rec.win .rk{color:var(--blue)}
+.rec .pick{margin-left:auto;font-size:10px;font-weight:800;color:#fff;background:var(--blue);border-radius:999px;padding:3px 9px;letter-spacing:.04em}
+.mock-cap{font-size:11.5px;color:var(--gray);padding:0 16px 14px}
+/* demo video */
+.video-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;margin-bottom:22px;box-shadow:0 18px 44px rgba(49,83,143,.10)}
+.video-card video{width:100%;display:block;border-radius:12px;background:#0f1b33;aspect-ratio:1920/1248;object-fit:contain}
+.video-cap{font-size:12.5px;color:var(--gray);padding:10px 4px 2px}
+.chart-cap{font-size:13px;color:var(--gray);line-height:1.55}
+.chart-cap.src{font-size:11px}
+/* ---------- generic ---------- */
+.grid{display:grid;gap:18px}
+.two{grid-template-columns:1fr 1fr}
+.three{grid-template-columns:repeat(3,1fr)}
+.four{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;transition:border-color .15s}
+.card:hover{border-color:var(--pale2)}
+.card .ic{width:42px;height:42px;border-radius:11px;background:var(--pale);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card .ic svg{width:22px;height:22px;stroke:var(--blue);fill:none;stroke-width:1.8}
+.card h3{margin-bottom:6px}
+.card p{font-size:13.5px;color:var(--gray)}
+.callout{background:var(--pale);border:1px solid var(--pale2);border-left:4px solid var(--blue);border-radius:12px;padding:22px 24px;margin-top:26px}
+.callout h3{margin-bottom:6px}
+.callout p{font-size:14.5px;color:var(--ink)}
+.callout .btn{margin-top:14px}
+/* big stat cards */
+.stat{text-align:left}
+.stat .num{font-size:38px;font-weight:800;color:var(--blue);letter-spacing:-.02em;line-height:1.1;margin-bottom:6px}
+.stat p{font-size:13.5px}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:st}
+.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 18px;position:relative}
+.step::before{counter-increment:st;content:"0" counter(st);font-size:26px;font-weight:300;color:var(--blue);display:block;margin-bottom:10px;letter-spacing:.02em}
+.step h3{font-size:15.5px;margin-bottom:6px}
+.step p{font-size:13px;color:var(--gray)}
+/* table */
+table{width:100%;border-collapse:collapse;table-layout:fixed;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+th,td{padding:13px 14px;text-align:left;vertical-align:top;font-size:13.5px;border-bottom:1px solid var(--bg2)}
+th{background:var(--bg2);font-weight:800;color:var(--navy);font-size:12.5px}
+.th-ic{display:inline-flex;vertical-align:-4px;margin-right:7px}
+.th-ic svg{width:17px;height:17px;stroke:var(--blue);fill:none;stroke-width:1.9}
+tr:last-child td{border-bottom:0}
+td b{color:var(--navy)}
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--navy)}
+.chip b{color:var(--blue)}
+/* zero-click split bar */
+.zc{display:flex;height:14px;border-radius:999px;overflow:hidden;margin:20px 0 10px;background:var(--bg2)}
+.zc .a{background:linear-gradient(90deg,var(--blue),var(--cyan));width:68%}
+.zc-legend{display:flex;gap:22px;flex-wrap:wrap;font-size:12.5px;color:var(--gray)}
+.zc-legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:middle}
+/* MAU bars */
+.mau{margin-top:12px}
+.mau-row{display:flex;align-items:center;gap:12px;margin:9px 0}
+.mau-row .n{width:118px;font-size:13px;color:var(--ink);font-weight:700;flex:none}
+.mau-row .track{flex:1;height:12px;border-radius:999px;background:var(--bg2);overflow:hidden;display:flex}
+.mau-row .fill{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+.mau-row .v{width:58px;text-align:right;font-size:12.5px;font-weight:800;color:var(--navy);flex:none}
+/* case trajectory */
+.traj{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:14px 0 6px}
+.traj-col{text-align:center}
+.traj-chart{height:200px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:10px}
+.traj-bar{width:100%;max-width:220px;margin:0 auto;border-radius:10px 10px 0 0;background:linear-gradient(180deg,var(--cyan),var(--blue));display:flex;align-items:flex-start;justify-content:center;color:#fff;font-weight:800;font-size:16px;padding-top:9px;min-height:34px}
+.traj-col small{font-size:12.5px;color:var(--gray);line-height:1.5;display:block;min-height:3.6em}
+/* delta arrow */
+.delta{display:inline-flex;align-items:center;gap:4px;color:var(--blue);font-weight:800}
+.delta svg{width:13px;height:13px;stroke:var(--blue);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+/* case before/after */
+.case-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch}
+.case-col{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 22px;text-align:center}
+.case-col .big{font-size:44px;font-weight:800;letter-spacing:-.02em}
+.case-col.before .big{color:var(--gray)}
+.case-col.after{border-color:var(--blue);background:var(--pale)}
+.case-col.after .big{color:var(--blue)}
+.case-col p{font-size:13px;color:var(--gray);margin-top:8px}
+.case-arrow{display:flex;align-items:center;font-size:28px;color:var(--blue);font-weight:800}
+/* accordion */
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:#fff;overflow:hidden}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 20px;background:none;border:0;cursor:pointer;font-family:inherit;font-size:15px;font-weight:700;color:var(--navy);text-align:left}
+.faq-q .x{flex:none;width:26px;height:26px;border-radius:8px;background:var(--pale);color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:800;transition:transform .2s}
+.faq-item.open .x{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.faq-a p{padding:0 20px 18px;font-size:14px;color:var(--gray)}
+/* footer */
+footer{background:var(--navy);color:#DCE6F5;padding:46px 0 40px}
+.foot-src{font-size:12px;color:#AFC4E6;max-width:640px}
+.foot-src a{color:#C9DBF8;overflow-wrap:anywhere;word-break:break-all}
+.foot-src li{margin:5px 0;list-style:none}
+.table-scroll{overflow-x:auto}
+/* banner */
+.banner{position:relative;border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#27437A 0%,var(--navy) 60%,#3d63a8 100%);color:#fff;padding:64px 56px}
+.banner .inner{position:relative}
+.banner h2{color:#fff;font-size:38px;margin-bottom:14px}
+.banner p{color:#DCE6F5;font-size:16px;max-width:640px;margin-bottom:26px}
+.banner-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 28px}
+.banner-steps .bs{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:16px}
+.banner-steps .bs b{color:#fff;display:block;font-size:14.5px;margin-bottom:4px}
+.banner-steps .bs span{font-size:13px;color:#DCE6F5}
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero h1{font-size:38px}
+  h1{font-size:34px}
+  .four{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .three{grid-template-columns:1fr}
+  .case-grid{grid-template-columns:1fr}
+  .case-arrow{justify-content:center;transform:rotate(90deg)}
+  .banner-steps{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  h1{font-size:28px}
+  h2{font-size:24px}
+  section{padding:48px 0}
+  .wrap{padding:0 20px}
+  .lead{font-size:15.5px;margin-bottom:22px}
+  .two,.four{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .hero{padding:48px 0 56px}
+  .hero h1{font-size:29px}
+  .hero .sub{font-size:15.5px}
+  .trust{gap:12px}
+  .trust div{font-size:12.5px}
+  .card{padding:18px 16px}
+  .callout{padding:18px 16px;margin-top:20px}
+  .brand-logo{flex:none}
+  .nav-in{gap:10px}
+  .brand-logo img{width:112px;height:auto;flex:none}
+  .nav .btn{padding:10px 12px;font-size:12.5px;white-space:nowrap}
+  #top .hero-grid>div{min-width:0}
+  .mockup{min-width:0}
+  /* comparison table: stack as cards */
+  .table-scroll{overflow-x:visible}
+  #compare table,#compare thead,#compare tbody,#compare tr,#compare th,#compare td{display:block}
+  #compare thead{display:none}
+  #compare table{border:0}
+  #compare tbody{display:grid;gap:14px}
+  #compare tr{background:#fff;border:1px solid var(--line);border-radius:14px;padding:4px 0;box-shadow:0 8px 20px rgba(49,83,143,.06)}
+  #compare td{border:0;padding:10px 16px;font-size:13.5px}
+  #compare td:first-child{font-weight:800;color:var(--navy);background:var(--bg2);border-radius:14px 14px 0 0;padding:12px 16px}
+  #compare td[data-label]::before{content:attr(data-label);display:block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);margin-bottom:3px}
+  .mau-row{flex-wrap:wrap;gap:6px 10px}
+  .mau-row .n{width:100%}
+  .mau-row .v{width:auto}
+  .traj{gap:10px}
+  .banner{padding:40px 20px}
+  .banner h2{font-size:26px}
+}
+@media (max-width:400px){
+  .brand-logo img{width:96px}
+  .nav-in{gap:8px}
+  .nav .btn{font-size:12px;padding:9px 10px}
+  .banner .btn{font-size:12.5px;padding:11px 14px;white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand-logo" href="https://singapore.bluemediagrp.com/#home" target="_blank" rel="noopener"><img src="assets/bfsg-logo.png" alt="BlueFocus Singapore"></a>
+    <a href="index.html" style="font-weight:700;font-size:14px;color:var(--navy);text-decoration:none;">ChatGPT Ads</a>
+    <a class="btn" href="https://singapore.bluemediagrp.com/#contact" target="_blank" rel="noopener">Free AI-visibility check</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="label">All in AI · Generative Engine Optimization</div>
+      <h1><span class="hl">GEO</span> — make your brand <span class="hl">the one AI recommends</span>.</h1>
+      <div class="engine-row">
+        <span class="engine-pill">ChatGPT</span>
+        <span class="engine-pill">Perplexity</span>
+        <span class="engine-pill">Gemini</span>
+        <span class="engine-pill">DeepSeek</span>
+        <span class="engine-pill">Doubao</span>
+        <span class="engine-pill dim">and more</span>
+      </div>
+      <p class="sub">Buyers ask AI first. <b>Citations replaced rankings, recommendations replaced clicks.</b> We run a fully-managed, measurable GEO programme — across Western and Chinese engines, one team.</p>
+      <div class="hero-ctas">
+        <a class="btn blue" href="https://singapore.bluemediagrp.com/#contact" target="_blank" rel="noopener">Get your free AI-visibility check</a>
+        <a class="btn ghost" href="#service" onclick="return go('service')">See how it works</a>
+      </div>
+      <div class="trust">
+        <div><span class="dot"></span>One team, <b>West + China</b> engines</div>
+        <div><span class="dot"></span>Live dashboard, <b>third-party auditable</b></div>
+        <div><span class="dot"></span><b>Outcome-aligned</b> Base + Bonus pricing</div>
+      </div>
+    </div>
+    <div>
+      <div class="mockup" role="img" aria-label="Illustration: an AI recommendation shortlist naming a featured brand">
+        <div class="mock-head"><span class="d"></span><span class="d"></span><span class="d"></span><span class="sp">AI answer</span><span class="tag">Live</span></div>
+        <div class="mock-body">
+          <div class="q">Which [category] brand should I choose?</div>
+          <div class="a">Based on buyer reviews and trusted sources, the shortlist is:
+            <div class="rec win"><span class="rk">1</span><span><b>Verra</b> — best balanced option, recommended first.</span><span class="pick">Featured pick</span></div>
+            <div class="rec"><span class="rk">2</span><span>Brand B — strong for a narrow use case.</span></div>
+            <div class="rec"><span class="rk">3</span><span>Brand C — budget alternative.</span></div>
+          </div>
+        </div>
+        <div class="mock-cap">Illustration: an AI recommendation shortlist. "Verra" is a made-up brand, shown for illustration only.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY NOW + WHAT IS GEO + RISK (merged) ===== -->
+<section id="why" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="label">Why Now</div>
+    <h2>Buyers read the AI answer — and stop clicking.</h2>
+    <p class="lead"><b>SEO optimises ranking; GEO optimises how the model reads you.</b> Not in the answer, and you don't exist in the buyer's first step.</p>
+    <div class="grid four">
+      <div class="card stat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11.5l6 6L21 11M3 11h6l1.5-3h6l1.5 3"/><path d="M5 21h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2z"/></svg></div><div class="num">68%</div><p>of searches end with <b>no click</b> (U.S. Google, 2026).</p></div>
+      <div class="card stat"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H7l-4 3V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/><path d="M8 12h8M8 15h5"/></svg></div><div class="num">900M+</div><p>ChatGPT weekly users · <b>2.5B+</b> prompts a day.</p></div>
+      <div class="card stat"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div><div class="num">&lt;5%</div><p>of brands optimise for AI answers — <b>wide-open window</b>.</p></div>
+    </div>
+    <div class="zc"><div class="a"></div><div style="flex:1"></div></div>
+    <div class="zc-legend"><span><i style="background:var(--blue)"></i><b>68%</b> end with no click</span><span><i style="background:var(--line)"></i><b>32%</b> still click through</span></div>
+    <div class="chips" style="margin-top:20px">
+      <span class="chip">Invisible — AI has nothing on you</span>
+      <span class="chip">Outranked — competitors recommended first</span>
+      <span class="chip">Misrepresented — wrong positioning taken as fact</span>
+      <span class="chip">Negatives only — cited coverage unfavourable</span>
+    </div>
+    <p class="chart-cap src" style="margin-top:14px">Source: U.S. Google zero-click study 2026 · ChatGPT public disclosures · market estimates. Re-verify at launch.</p>
+  </div>
+</section>
+
+<!-- ===== ENGINE COVERAGE ===== -->
+<section id="engines">
+  <div class="wrap">
+    <div class="label">Engine Coverage</div>
+    <h2>Ten engines, one team — East and West under one roof.</h2>
+    <div class="grid two">
+      <div class="card">
+        <h3>Western / Global · 2.80B MAU</h3>
+        <p style="margin:8px 0 4px">English-speaking buyers:</p>
+        <div class="mau">
+          <div class="mau-row"><span class="n">ChatGPT</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="v">1.26B</span></div>
+          <div class="mau-row"><span class="n">Gemini</span><span class="track"><span class="fill" style="width:51.5%"></span></span><span class="v">649M</span></div>
+          <div class="mau-row"><span class="n">Claude</span><span class="track"><span class="fill" style="width:20.6%"></span></span><span class="v">260M</span></div>
+          <div class="mau-row"><span class="n">Grok</span><span class="track"><span class="fill" style="width:11.1%"></span></span><span class="v">140M</span></div>
+          <div class="mau-row"><span class="n">Meta AI</span><span class="track"><span class="fill" style="width:10.4%"></span></span><span class="v">131M</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Chinese ecosystem · 805M MAU</h3>
+        <p style="margin:8px 0 4px">China-market buyers:</p>
+        <div class="mau">
+          <div class="mau-row"><span class="n">Doubao</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="v">528M</span></div>
+          <div class="mau-row"><span class="n">Qwen</span><span class="track"><span class="fill" style="width:39.2%"></span></span><span class="v">207M</span></div>
+          <div class="mau-row"><span class="n">DeepSeek</span><span class="track"><span class="fill" style="width:36.9%"></span></span><span class="v">195M</span></div>
+          <div class="mau-row"><span class="n">Yuanbao</span><span class="track"><span class="fill" style="width:15%"></span></span><span class="v">79M</span></div>
+          <div class="mau-row"><span class="n">Ernie</span><span class="track"><span class="fill" style="width:8.9%"></span></span><span class="v">47M</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="chart-cap src" style="margin-top:14px">Source: QuestMobile AI app full-usage monitoring (iOS includes App + web), Aug 2026; MAU proportional within region.</p>
+  </div>
+</section>
+
+<!-- ===== SERVICE (pillar + how merged) ===== -->
+<section id="service" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="label">The Service</div>
+    <h2>A fully-managed GEO service — one team, every major AI engine.</h2>
+    <p class="lead">From first diagnosis to long-term execution, we run the whole loop so your brand is the one AI cites. No in-house AI team needed.</p>
+    <div class="grid three">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>GEO Deep Diagnosis</h3><p>Quantify your real position and gaps across AI answers.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M8 15l3-4 3 3 4-6"/></svg></div><h3>Long-Term Execution</h3><p>Entity, content and source-chain build, transparent every month.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h8"/></svg></div><h3>Visibility Dashboard</h3><p>Across target engines; every conclusion queryable and traceable.</p></div>
+    </div>
+    <div class="callout">
+      <p><b>One managed loop:</b> build the intent pool → site optimization → place intent-targeted content → daily track &amp; iterate. Visibility compounds monthly; site changes are guided with code snippets — no rebuild needed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ALWAYS-ON REACH (cadence + source network merged) ===== -->
+<section id="reach">
+  <div class="wrap">
+    <div class="label">Always-On</div>
+    <h2>Content, placement, daily tracking — proof every week.</h2>
+    <div class="grid four">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><h3>Content</h3><p>2–4 GEO pieces per intent, monthly.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>Placement</h3><p>1–2 pieces per intent weekly on cited sites.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Daily monitoring</h3><p>Mention rate and ranking across engines.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div><h3>Weekly report</h3><p>Results, trends, next-stage plan.</p></div>
+    </div>
+    <div class="callout">
+      <h3>100,000+ sources, matched by algorithm — not a fixed buy list.</h3>
+      <p>Web/news, self-media, short-video, creators and WeChat accounts, picked by highest citation weight for each intent and refined on live citation data. Benchmarked on the same intents vs competitors — recommendation inside the answer, not vanity media stats.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LIVE DASHBOARD ===== -->
+<section id="dashboard" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="label">Live Dashboard</div>
+    <h2>A live dashboard — not a monthly PDF.</h2>
+    <p class="lead">24h monitoring, fully traceable and open to third-party audit.</p>
+    <div class="video-card">
+      <video controls playsinline preload="none">
+        <source src="assets/dashboard-demo-30s.mp4" type="video/mp4">
+      </video>
+      <p class="video-cap">30-second walkthrough of the live visibility dashboard · anonymised sample data</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PACKAGES (+ audience chips) ===== -->
+<section id="packages">
+  <div class="wrap">
+    <div class="label">Engagement</div>
+    <h2>Four ways to start — pick by your market and the question buyers ask.</h2>
+    <div class="chips" style="margin:0 0 22px">
+      <span class="chip">Finance</span><span class="chip">Technology</span><span class="chip">SaaS</span><span class="chip">Education</span><span class="chip">Healthcare</span><span class="chip">Consumer, Auto &amp; Manufacturing</span>
+    </div>
+    <div class="grid two">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.1 1.1 5.9L12 16.6 6.7 19.4l1.1-5.9L3.4 9.4l6-.8L12 3z"/></svg></div>
+        <h3>Brand Recommendation</h3>
+        <p><b>For:</b> "Which [category] should I buy?" intents · <b>Platforms:</b> Doubao, Qwen, DeepSeek, Yuanbao.</p>
+        <p style="margin-top:8px"><b>3 months+</b> · rec. ≥60%, Top-3 ≥60%, priority ≥60%.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div>
+        <h3>Entity / Term Optimization</h3>
+        <p><b>For:</b> brand vs competitor comparison intents · <b>Platforms:</b> Doubao, Qwen, DeepSeek, Yuanbao.</p>
+        <p style="margin-top:8px"><b>3 months+</b> · favourable entity-term appearance ≥60%.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 0-2 2z"/><path d="M9 8h6M12 5v6M9 15h6"/></svg></div>
+        <h3>Healthcare Knowledge Base</h3>
+        <p><b>For:</b> pharma, OTC, medical devices · <b>Platforms:</b> Doubao, medical AI, Toutiao &amp; Douyin AI.</p>
+        <p style="margin-top:8px"><b>12 months</b> · content usage &amp; citation monitored.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.8 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.8-3.5-9S9.5 5.5 12 3z"/></svg></div>
+        <h3>Overseas GEO</h3>
+        <p><b>For:</b> SEA, Europe, US English markets · <b>Platforms:</b> ChatGPT &amp; global English engines.</p>
+        <p style="margin-top:8px"><b>1 month+</b> · recommendation rate +20% to +60%.</p>
+      </div>
+    </div>
+    <p class="chart-cap" style="margin-top:12px">Targets are indicative starting KPI bands, tuned per category.</p>
+  </div>
+</section>
+
+<!-- ===== PRICING + FAQ (compressed) ===== -->
+<section id="pricing" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="label">Pricing</div>
+    <h2>Base + Bonus: you pay for outcomes, not promises.</h2>
+    <p class="lead">Base covers guaranteed delivery, billed monthly; Bonus is paid only when the agreed KPIs hit. Entry · 3 intents · 1 platform, or Growth · 5 intents · 1 platform — custom quote per scope, no public price.</p>
+    <div class="callout">
+      <h3>When you'll see movement</h3>
+      <p>From ~2 weeks; significant mention-rate change by 4–8 weeks. Illustrative — depends on category competition, starting visibility and intent complexity.</p>
+    </div>
+    <h2 style="margin-top:40px">Straight answers</h2>
+    <div class="faq-item open">
+      <button class="faq-q" onclick="faq(this)">What does the AI-visibility check cost?<span class="x">+</span></button>
+      <div class="faq-a"><p>Nothing. The check is free — see where AI currently stands on your brand.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="faq(this)">When will I see movement?<span class="x">+</span></button>
+      <div class="faq-a"><p>As early as 2 weeks, with significant mention-rate change by 4–8 weeks, depending on category.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="faq(this)">Can the numbers be verified?<span class="x">+</span></button>
+      <div class="faq-a"><p>Yes — a live, traceable dashboard open to independent third-party audit.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CASE STUDY ===== -->
+<section id="case">
+  <div class="wrap">
+    <div class="label">Proof</div>
+    <h2>One 12-week journey: from invisible to the AI's featured pick.</h2>
+    <p class="lead">European automotive brand · Doubao · managed GEO, answer-by-answer tracking.</p>
+    <div class="traj">
+      <div class="traj-col"><div class="traj-chart"><div class="traj-bar" style="height:34px">3%</div></div><small><b>Week 1</b><br/>absent on most intents · Top-1 near zero · 0% featured</small></div>
+      <div class="traj-col"><div class="traj-chart"><div class="traj-bar" style="height:118px">~45%</div></div><small><b>Week 6</b><br/>entering the shortlist · starting to be cited</small></div>
+      <div class="traj-col"><div class="traj-chart"><div class="traj-bar" style="height:200px">94%</div></div><small><b>Week 12</b><br/>featured pick · top-placement 87% · leaderboard #2 · +91 pts</small></div>
+    </div>
+    <p class="chart-cap src" style="margin-top:14px">Source: BlueFocus GEO monitoring dashboard, anonymised client programme (n=1), 12-week window; self-reported vendor data, illustrative of one category. Bars show share of buyer intents where the brand appears in the AI answer.</p>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section id="start">
+  <div class="wrap">
+    <div class="banner">
+      <div class="inner">
+        <div class="label" style="color:var(--cyan)">Get Started</div>
+        <h2>When users ask AI, are you recommended — or ignored?</h2>
+        <p>10 engines EN + CN · live audit-ready dashboard · outcome-priced Base + Bonus.</p>
+        <div class="banner-steps">
+          <div class="bs"><b>1 · Free AI-visibility check</b><span>See where AI stands on your brand today.</span></div>
+          <div class="bs"><b>2 · 45-minute GEO call</b><span>Agree priority intents and target engines.</span></div>
+          <div class="bs"><b>3 · We run the managed loop</b><span>Make your brand the one AI recommends.</span></div>
+        </div>
+        <a class="btn blue" href="https://singapore.bluemediagrp.com/#contact" target="_blank" rel="noopener">Get your free AI-visibility check</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-src">
+      <p style="font-weight:800;color:#fff;margin-bottom:8px">Sources &amp; verification</p>
+      <ul>
+        <li>Fact base: BlueFocus SG GEO data; market stats re-verified at launch.</li>
+        <li>Engine MAU: QuestMobile AI app full-usage monitoring, Aug 2026.</li>
+        <li>Dashboard panel is illustrative, based on an anonymised client trend; live demo on request.</li>
+        <li>Case study: anonymised client programme (n=1), self-reported vendor data; illustrative of one category.</li>
+        <li>"Verra" and all example brands are fictitious, shown for illustration only.</li>
+        <li>BlueMedia Singapore Pte Ltd · a BlueFocus Communication Group company.</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+function go(id){
+  var el=document.getElementById(id);
+  if(!el)return true;
+  var y=el.getBoundingClientRect().top+(window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0)-82;
+  if(y<0)y=0;
+  try{window.scrollTo({top:y,behavior:'smooth'})}catch(e){window.scrollTo(0,y)}
+  return false;
+}
+function faq(btn){var item=btn.parentElement;var a=item.querySelector('.faq-a');var open=item.classList.contains('open');
+document.querySelectorAll('.faq-item.open').forEach(function(it){it.classList.remove('open');it.querySelector('.faq-a').style.maxHeight='0'});
+if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}}
+</script>
+
+</body>
+</html>
