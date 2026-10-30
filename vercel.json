@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/chatgpt-ads", "destination": "/index.html" },
+    { "source": "/chatgpt-ads/", "destination": "/index.html" },
+    { "source": "/geo", "destination": "/geo.html" },
+    { "source": "/geo/", "destination": "/geo.html" }
+  ]
+}
